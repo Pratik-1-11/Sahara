@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+# 🌍 Sahara: Real-Time Disaster Management Platform
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white)
 
-## Get started
+**Sahara** is a comprehensive, civic-tech mobile application and web-based admin dashboard designed to enhance public awareness, preparedness, and response during natural disasters in Nepal. 
 
-1. Install dependencies
+Built to address the critical fragmentation in disaster communication tools, Sahara unifies real-time alerts, SOS geolocation, community feeds, and educational resources into a single, highly scalable platform.
+
+> **🎓 Academic Context:** Developed as a final-year Capstone Project for the Bachelor of Computer Information Systems (BCIS) at Pokhara University. 
+
+---
+
+## 🚀 Core Features
+
+### 📱 Mobile Application (Citizen-Facing)
+*   **Real-Time Disaster Map:** Live geolocation tracking using Google Maps API, highlighting danger zones, safe zones, and nearby emergency shelters.
+*   **Emergency SOS:** A one-tap SOS button that transmits the user's GPS coordinates and disaster type (Earthquake, Flood, Fire, Landslide) directly to the admin dashboard.
+*   **Live Alerts & Push Notifications:** Automated push notifications powered by Firebase Cloud Messaging (FCM) for immediate hazard warnings.
+*   **Preparedness Quizzes:** Interactive educational modules to test and improve user knowledge on disaster safety.
+*   **Community Feed:** A moderated social feed for citizens to report on-ground updates, infrastructure damage, and relief distribution efforts.
+
+### 💻 Admin Panel (Government/Responder-Facing)
+*   **Dashboard Overview:** Real-time metrics on active alerts, affected locations, registered users, and high-priority SOS signals.
+*   **Alert Management:** Create, update, and delete disaster alerts with specific severity levels (High, Medium, Low) and status tags.
+*   **Role-Based Access Control (RBAC):** Secure authentication ensuring only authorized government officials can broadcast alerts or view sensitive SOS data.
+
+---
+
+## 🛠️ Technology Stack & Architecture
+
+*   **Frontend (Mobile):** React Native (Cross-platform iOS & Android)
+*   **Frontend (Web Admin):** React.js, Leaflet.js (for lightweight web mapping)
+*   **Backend & Database:** Firebase (Authentication, Firestore/Realtime DB, Cloud Functions)
+*   **Third-Party APIs:** 
+    *   **USGS API:** Real-time global earthquake data ingestion.
+    *   **DHM (Nepal):** Web scraping for localized flood warning data.
+    *   **OpenWeather API:** Live meteorological updates.
+*   **Mapping:** Google Maps API
+
+---
+
+## 📐 System Design & Documentation (SDLC)
+
+The system was built using the **Agile Methodology** (sprints, rapid prototyping, continuous feedback). The architecture is highly documented to ensure scalability and maintainability:
+
+*   **System Modeling:** Complete **Use Case Diagrams** detailing User vs. Admin interactions.
+*   **Database Architecture:** Robust **Entity-Relationship (ER) Diagrams** ensuring efficient NoSQL data structuring.
+*   **Data Flow:** Comprehensive **Level 0 and Level 1 Data Flow Diagrams (DFDs)** mapping how external API data moves through the system to the end-user.
+*   **Testing Strategy:** Implemented Unit Testing, Integration Testing, UAT, and Security/Performance testing to ensure resilience under high server load.
+
+---
+
+## 🔒 Security & Data Handling
+
+Because the system handles emergency SOS data and confidential user locations:
+*   **Authentication:** Secure login/registration via Firebase Auth.
+*   **Authorization:** Strict Firebase Security Rules to prevent unauthorized data access.
+*   **Confidentiality:** Admin routes are protected, and users can only read/write their own data.
+
+---
+
+## ⚙️ Local Setup & Installation
+
+### Prerequisites
+*   Node.js (v16+)
+*   React Native CLI or Expo CLI
+*   Firebase Account
+
+### Steps
+1. **Clone the repository:**
+
+2. Install dependencies:
+
+bash
+npm install
+
+3.Environment Variables Setup:
+
+Create a .env file in the root directory.
+
+Add your Firebase configuration keys and API keys (Google Maps, OpenWeather).
+4. Run the application:
+
+bash
+npm start
+ Future Enhancements
+Offline-First Architecture: Implement offline caching with SMS/USSD fallback for remote, low-connectivity areas.
+
+AI Risk Analysis: Employ machine learning to forecast floods and landslides based on historical monsoon and river data.
+
+Multilingual Support: Full Nepali and local dialect integration.
+.
+
+
+
 
    ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   git clone https://github.com/Pratik-1-11/Sahara.git
+   cd Sahara
