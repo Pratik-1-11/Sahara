@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access, but require authentication for writes
+    // This is good for public data like safety tips and alerts
+    match /{document=**} {
+      allow read: if true; // Anyone can read
+      allow write: if request.auth != null; // Only authenticated users can write
+    }
+  }
+} 

@@ -1,0 +1,80 @@
+﻿{
+    "expo":  {
+                 "name":  "Sahara",
+                 "slug":  "Sahara",
+                 "version":  "1.0.0",
+                 "orientation":  "portrait",
+                 "icon":  "./assets/images/Sahara-Logo.png",
+                 "scheme":  "saahara",
+                 "userInterfaceStyle":  "automatic",
+                 "platforms":  [
+                                   "ios",
+                                   "android",
+                                   "web"
+                               ],
+                 "jsEngine":  "hermes",
+                 "updates":  {
+                                 "fallbackToCacheTimeout":  0
+                             },
+                 "assetBundlePatterns":  [
+                                             "**/*"
+                                         ],
+                 "ios":  {
+                             "supportsTablet":  true,
+                             "bundleIdentifier":  "com.sahara.app"
+                         },
+                 "android":  {
+                                 "adaptiveIcon":  {
+                                                      "foregroundImage":  "./assets/images/Sahara-Logo.png",
+                                                      "backgroundColor":  "#ffffff"
+                                                  },
+                                 "permissions":  [
+                                                     "INTERNET",
+                                                     "ACCESS_FINE_LOCATION",
+                                                     "ACCESS_COARSE_LOCATION",
+                                                     "CAMERA",
+                                                     "READ_EXTERNAL_STORAGE",
+                                                     "WRITE_EXTERNAL_STORAGE",
+                                                     "CALL_PHONE",
+                                                     "SEND_SMS",
+                                                     "READ_PHONE_STATE",
+                                                     "RECORD_AUDIO",
+                                                     "MODIFY_AUDIO_SETTINGS"
+                                                 ],
+                                 "package":  "com.sahara.app",
+                                 "softwareKeyboardLayoutMode":  "pan",
+                                 "allowBackup":  true
+                             },
+                 "web":  {
+                             "bundler":  "metro",
+                             "output":  "static",
+                             "favicon":  "./assets/images/Sahara-Logo.png"
+                         },
+                 "plugins":  [
+                                 "expo-router",
+                                 [
+                                     "expo-splash-screen",
+                                     {
+                                         "image":  "./assets/images/Sahara-Logo.png",
+                                         "imageWidth":  200,
+                                         "resizeMode":  "contain",
+                                         "backgroundColor":  "#ffffff"
+                                     }
+                                 ]
+                             ],
+                 "experiments":  {
+                                     "typedRoutes":  true,
+                                     "tsconfigPaths":  true
+                                 },
+                 "extra":  {
+                               "router":  {
+                                              "origin":  false,
+                                              "unstable_src":  "./app"
+                                          },
+                               "eas":  {
+                                           "projectId":  "1439ab6e-eb68-4908-836f-b0f7b3049da1"
+                                       }
+                           },
+                 "owner":  "pratik5407"
+             }
+}
