@@ -9,7 +9,7 @@
 
 Built to address the critical fragmentation in disaster communication tools, Sahara unifies real-time alerts, SOS geolocation, community feeds, and educational resources into a single, highly scalable platform.
 
-> **🎓 Academic Context:** Developed as a final-year Capstone Project for the Bachelor of Computer Information Systems (BCIS) at Pokhara University. 
+
 
 ---
 
